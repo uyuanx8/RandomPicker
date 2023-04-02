@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal|top">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="72dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/rps_player"
+            android:textSize="36sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/rps_cpu"
+            android:textSize="36sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <ImageView
+            android:id="@+id/rps_img_player"
+            android:layout_width="0dp"
+            android:layout_height="144dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="13dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/rps_player_paper" />
+
+        <ImageView
+            android:id="@+id/rps_img_cpu"
+            android:layout_width="0dp"
+            android:layout_height="144dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="13dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/rps_cpu_rock" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/rps_btn_rock"
+            android:layout_width="0dp"
+            android:layout_height="128dp"
+            android:layout_weight="1"
+            android:layout_margin="16dp"
+            android:src="@drawable/temporary"
+            android:background="#0048FFCA"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+
+        <ImageButton
+            android:id="@+id/rps_btn_scissors"
+            android:layout_width="0dp"
+            android:layout_height="128dp"
+            android:layout_weight="1"
+            android:layout_margin="16dp"
+            android:src="@drawable/temporary"
+            android:background="#0048FFCA"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+
+        <ImageButton
+            android:id="@+id/rps_btn_paper"
+            android:layout_width="0dp"
+            android:layout_height="128dp"
+            android:layout_weight="1"
+            android:layout_margin="16dp"
+            android:src="@drawable/temporary"
+            android:background="#0048FFCA"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/rps_winlose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textSize="48sp"/>
+
+</LinearLayout>

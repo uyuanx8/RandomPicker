@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|top"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_marginTop="24dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/picker_list"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:textSize="160sp" />
+
+        <EditText
+            android:id="@+id/picker_add_text"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/picker_list"
+            android:layout_alignLeft="@id/picker_list"
+            android:layout_marginTop="12dp"
+            android:maxLength="36"
+            android:maxLines="1"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/picker_add_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/picker_list"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/picker_add_text"
+            android:src="@drawable/temporary" />
+
+        <TextView
+            android:id="@+id/picker_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:padding="12dp"
+            android:textSize="27sp"/>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/picker_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:adjustViewBounds="true"
+        android:background="#0048FFCA"
+        android:scaleType="fitCenter"
+        android:src="@drawable/temporary" />
+
+
+</LinearLayout>

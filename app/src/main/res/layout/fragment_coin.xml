@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|top"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/coin_layout"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:id="@+id/coin_mini_layout_first">
+
+            <ImageView
+                android:id="@+id/coin_first"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/coin_heads"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/coin_second"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/coin_heads"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/coin_third"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/coin_heads"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:id="@+id/coin_mini_layout_second"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/coin_fourth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:padding="10dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/coin_heads"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/coin_fifth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:padding="10dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/coin_heads"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/coin_sixth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:padding="10dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/coin_heads"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:id="@+id/coin_mini_layout_third"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/coin_seventh"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:padding="10dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/coin_heads"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/coin_eighth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:padding="10dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/coin_heads"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/coin_ninth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:padding="10dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/coin_heads"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/coin_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:max="9"
+        android:min="1" />
+
+    <ImageButton
+        android:id="@+id/coin_flip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/temporary"
+        android:background="#0048FFCA"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"/>
+</LinearLayout>

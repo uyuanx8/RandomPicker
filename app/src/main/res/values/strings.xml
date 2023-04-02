@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Random Picker</string>
+    <string name="rps_cpu">CPU</string>
+    <string name="rps_player">Player</string>
+    <string name="rps_win">Win</string>
+    <string name="rps_lose">Lose</string>
+    <string name="rps_tie">Tie</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
