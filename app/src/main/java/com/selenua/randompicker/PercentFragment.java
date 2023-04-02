@@ -126,14 +126,12 @@ public class PercentFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (!isOnAnimation) {
-                    Log.d("asdf","Crash 1");
                     String str = txtMax.getText().toString();
                     if (!str.isEmpty()) {
                         double db = Double.parseDouble(str);
                         while (!(db >= 0 && db <= 1)) {
                             db /= 10;
                         }
-                        Log.d("asdf","Crash 2");
                         curMax = (int) (db * 10000);
                         if (curMax < 0) {
                             curMax = 0;
@@ -142,12 +140,10 @@ public class PercentFragment extends Fragment {
                     } else {
                         curMax = 0;
                     }
-                    Log.d("asdf","Crash 3");
 
                     seekBarNum.setProgress(curMax);
                     txtMax.setText(String.format("%.4f", (double) curMax / 10000) + "");
 
-                    Log.d("asdf","Crash 4");
 
                     int rand = (int) (Math.random() * 10000);
                     if (rand < curMax) {
@@ -155,9 +151,7 @@ public class PercentFragment extends Fragment {
                     } else {
                         txtMain.setText("X");
                     }
-                    Log.d("asdf","Crash 5");
                     txtMain.startAnimation(pickAnim);
-                    Log.d("asdf","Crash 6");
                 }
             }
         });
