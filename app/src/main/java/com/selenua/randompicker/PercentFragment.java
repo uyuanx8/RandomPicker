@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,18 +61,24 @@ public class PercentFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                int selection = txtMax.getSelectionStart();
                 String str = charSequence.toString();
-                if(!str.isEmpty()) {
-                    curMax = Integer.parseInt(str);
-                    if(curMax<0){
-                        curMax=0;
+                if (!str.isEmpty()) {
+                    double db = Double.parseDouble(str);
+                    while (!(db >= 0 && db <= 1)) {
+                        db /= 10;
+                        selection++;
                     }
-                }
-                else{
-                    curMax = 1;
+                    curMax = (int) (db * 10000);
+                    if (curMax < 0) {
+                        curMax = 0;
+                    }
+
+                } else {
+                    curMax = 0;
                 }
                 seekBarNum.setProgress(curMax);
-                txtMax.setSelection(txtMax.length());
+                txtMax.setSelection(selection);
             }
 
             @Override
@@ -102,7 +109,7 @@ public class PercentFragment extends Fragment {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 curMax = i;
-                txtMax.setText(i+"");
+                txtMax.setText(String.format("%.4f", (double) i / 10000) + "");
             }
 
             @Override
@@ -119,25 +126,38 @@ public class PercentFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (!isOnAnimation) {
+                    Log.d("asdf","Crash 1");
                     String str = txtMax.getText().toString();
-                    if(!str.isEmpty()) {
-                        curMax = Integer.parseInt(str);
-                        if(curMax<0){
-                            curMax=0;
+                    if (!str.isEmpty()) {
+                        double db = Double.parseDouble(str);
+                        while (!(db >= 0 && db <= 1)) {
+                            db /= 10;
                         }
-                        if(curMax>1){
-                            curMax=1;
+                        Log.d("asdf","Crash 2");
+                        curMax = (int) (db * 10000);
+                        if (curMax < 0) {
+                            curMax = 0;
                         }
-                    }
-                    else{
-                        curMax = 1;
-                    }
-                    seekBarNum.setProgress(curMax);
-                    txtMax.setText(curMax+"");
 
-                    double rand = Math.random();
-                    txtMain.setText(rand+"");
+                    } else {
+                        curMax = 0;
+                    }
+                    Log.d("asdf","Crash 3");
+
+                    seekBarNum.setProgress(curMax);
+                    txtMax.setText(String.format("%.4f", (double) curMax / 10000) + "");
+
+                    Log.d("asdf","Crash 4");
+
+                    int rand = (int) (Math.random() * 10000);
+                    if (rand < curMax) {
+                        txtMain.setText("O");
+                    } else {
+                        txtMain.setText("X");
+                    }
+                    Log.d("asdf","Crash 5");
                     txtMain.startAnimation(pickAnim);
+                    Log.d("asdf","Crash 6");
                 }
             }
         });
