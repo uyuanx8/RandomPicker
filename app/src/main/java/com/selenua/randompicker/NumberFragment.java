@@ -19,11 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link NumberFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class NumberFragment extends Fragment {
 
 
