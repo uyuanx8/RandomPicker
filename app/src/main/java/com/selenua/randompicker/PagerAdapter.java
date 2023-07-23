@@ -18,17 +18,15 @@ public class PagerAdapter extends FragmentStateAdapter {
             case 0:
                 return new NumberFragment();
             case 1:
-                return new PickerFragment();
-            case 2:
                 return new DiceFragment();
-            case 3:
+            case 2:
                 return new CoinFragment();
             default:
-                return new RpsFragment();
+                return new PickerFragment();
         }
     }
     @Override
     public int getItemCount(){
-        return 5;
+        return 4;
     }
 }
