@@ -1,4 +1,4 @@
-package com.selenua.randompicker;
+package com.uyuanx.randompicker;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

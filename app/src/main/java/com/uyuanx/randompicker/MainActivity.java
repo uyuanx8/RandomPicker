@@ -1,4 +1,4 @@
-package com.selenua.randompicker;
+package com.uyuanx.randompicker;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;

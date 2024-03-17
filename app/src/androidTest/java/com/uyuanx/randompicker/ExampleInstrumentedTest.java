@@ -1,4 +1,4 @@
-package com.selenua.randompicker;
+package com.uyuanx.randompicker;
 
 import android.content.Context;
 
