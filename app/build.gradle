@@ -6,7 +6,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.selenua.randompicker"
+        applicationId "com.uyuanx.randompicker"
         minSdk 23
         targetSdk 33
         versionCode 1
